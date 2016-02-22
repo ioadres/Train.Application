@@ -1,8 +1,25 @@
 ﻿@{
     ViewBag.Title = "About";
 }
+
+
+    <script src="~/Scripts/Lib/react/react.min.js"></script>
+<script src="~/Scripts/Lib/react/react-dom.min.js"></script>
+@Scripts.Render("~/bundles/core")
+
+
+
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
-test
+
 
 <p>Use this area to provide additional information.</p>
+
+
+<div id="content">
+    <ul>
+        <li>Amigo 1 </li>
+        <li>Amigo 2</li>
+        <li>Amigo 3</li>
+    </ul>
+</div>
