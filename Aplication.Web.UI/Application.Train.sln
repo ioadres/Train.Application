@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Web.UI", "Aplic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Web.UI.UnitTest", "Aplication.Web.UI.UnitTest\Application.Web.UI.UnitTest.csproj", "{F4A003A1-07CD-4EE0-9DA7-12C159729CBE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application.Presentation", "Application.Presentation", "{FC7F6AD6-0320-44E8-92F5-61159F04517C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{FC7F6AD6-0320-44E8-92F5-61159F04517C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application.DistribuitedService", "Application.DistribuitedService", "{77C88BB1-D2FB-45F8-A818-327DE9B20811}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - WebApi", "2 - WebApi", "{77C88BB1-D2FB-45F8-A818-327DE9B20811}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Web.Api", "Application.Web.Api\Application.Web.Api.csproj", "{13C8D62B-8053-4F5E-A8D9-6692FE0B7B81}"
 EndProject
