@@ -4,134 +4,52 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/uuid")
-    
-    
 </head>
 <body>
-    <style>
+   
 
-        body {
-            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-            font-size: 13px;
-        }
-        .navbar-short {
-            min-height: 38px;
-            margin-bottom:0px;
-        }
-
-        .navbar-background {
-            background-color: white;
-            border-bottom: 1px solid #BBB;
-        }
-        .style-navbar-nav {
-            padding:7px 30px 7px 30px;
-        }
-
-    .style-navbar-right-margin li {
-        margin-right:10px;
-        top: 3px;
-    }
-    .style-navbar-right-margin li .glyphicon {
-       position: relative;
-       vertical-align: middle;
-       font-size: 18px;   
-       color:#1582dc;
-    }
-
-    .style-navbar-right-margin li:last-child {
-        font-size:14px;
-        color:white;
-        background-color:#1582dc;
-        border-left:1px solid #BBB;
-        margin-right: 0px;
-        margin-left: 10px;
-        top:0px;
-    } 
-
-    /* Menu right*/
-    .menu-right-content {
-        border-right:1px solid #eee;
-        margin-left:1px;
-        color:#5F6571;
-    }
-
-    .menu-right-content img{
-        max-height:250px; 
-        max-width: 184px;
-    }
-
-    .menu-right-content ul{
-        text-decoration: none;
-        list-style: none;
-        padding: 0px;
-    }
-    .menu-right-content li{
-        border-bottom:1px solid #eee; 
-        border-right:1px solid #eee; 
-        padding:8px;
-    }
-
-    .menu-right-content .active{       
-        border-right: 4px solid #428bca;
-        border-bottom: 4px solid #428bca;
-    }
-
-
-    </style>
-
-        <div class="navbar navbar-short navbar-background">
-            <div class="navbar-collapse collapse">
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-        
-        <div>
+    <div class="navbar">
+        <div class="navbar-collapse navbar-border">
             <div class="row">
-                <div class="col-md-2">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md10">
-                                <div class="menu-right-content">                                   
-                                   <img src="http://www.vitadelia.com/images/2008/11/mujer-deportista.jpg" />   
-                                   <p style="margin:10px">MENU</p>                            
-                                   <ul>
-                                       <li class="active">Rutinas</li>
-                                       <li>Dietas</li>
-                                       <li>Rendimiento</li>
-                                   </ul>
-                                </div>
-                            </div>                           
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8">
-
-                    <div class="container body-content">
-                        @RenderBody()
-                        <hr />
-                        <footer>
-                            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-                        </footer>
-                    </div>
-
-
-                </div>
-                
-                
-                
-                
-                <div class="col-md-2">.col-md-4</div>
-            </div>
+                <div class="col-6">Compañia</div>
+                <div class="col-6">@Html.Partial("_LoginPartial")</div>
+            </div>            
         </div>
+        <div class="togle-menu"></div>
+    </div>
+        
+    <div>
+        <div class="row">
+            <div class="col-2">  
+                <div class="menu-left-content">     
+                    <nav class="row">                              
+                        <div class="col-12"><img src="http://www.vitadelia.com/images/2008/11/mujer-deportista.jpg" /> </div>                                                    
+                        <ul class="col-12">
+                            <li class="active">Rutinas</li>
+                            <li>Dietas</li>
+                            <li>Rendimiento</li>
+                        </ul>
+                    </nav>                                 
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="container body-content">
+                    @RenderBody()
+                    <hr />
+                    <footer>
+                        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                    </footer>
+                </div>
+            </div>
+            <div class="col-2">.col-md-4</div>
+        </div>
+    </div>
 
-    <br /><br /><br />
-       
-
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>
