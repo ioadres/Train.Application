@@ -1,4 +1,5 @@
-﻿.navbar {
+﻿/* Menu main */
+.navbar {
     box-sizing: border-box;
     display: -webkit-flex;
     display: -ms-flexbox;
