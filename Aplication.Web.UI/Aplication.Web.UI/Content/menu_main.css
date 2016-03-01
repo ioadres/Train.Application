@@ -22,9 +22,6 @@
     margin-right: -1%;
     margin-left: -1%;
     margin-bottom:3%;
-
-    color:white;
-
 }
 
 .navbar .navbar-background {background-color:#BBB;}
@@ -60,6 +57,7 @@
     font-size:16px;
     background-color: #1582dc;
     border-bottom: 1px solid #EEE;
+    color:white;
 }
 
 .togle-menu {
