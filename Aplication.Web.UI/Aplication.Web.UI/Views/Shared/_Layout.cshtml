@@ -5,22 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    @Styles.Render("~/Content/css")
+    
+    @Styles.Render("~/Content/css")       
+    @Scripts.Render("~/bundles/jquery")     
     @Scripts.Render("~/bundles/uuid")
+    @Scripts.Render("~/bundles/core")    
+    @Scripts.Render("~/bundles/meuMain")
+    
 </head>
 <body>
    
 
     <div class="navbar">
         <div class="navbar-collapse navbar-border">
+            <div class="content">
             <div class="row">
-                <div class="col-6">Compañia</div>
+                <div class="col-6">empresa</div>
                 <div class="col-6">@Html.Partial("_LoginPartial")</div>
             </div>            
+            </div>
         </div>
-        <div class="togle-menu"></div>
+        <div class="toggle-menu" style="display:none;"></div>
     </div>
-        
     <div>
         <div class="row">
             <div class="col-2">  

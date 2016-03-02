@@ -27,8 +27,6 @@
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -1%;
-  margin-left: -1%;
 }
 
 .row.reverse {

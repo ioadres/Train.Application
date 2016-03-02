@@ -10,7 +10,7 @@ namespace Aplication.Web.UI
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/Lib/jquery-{version}.js"));
-
+                        
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/Lib/jquery.validate*"));
 
@@ -18,22 +18,20 @@ namespace Aplication.Web.UI
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/Lib/modernizr-*"));
-
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/Lib/bootstrap.js",
-                      "~/Scripts/Lib/respond.js"));
-
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/site.css"));
-
+                        
             bundles.Add(new ScriptBundle("~/bundles/uuid").Include(
                         "~/Scripts/Lib/uuid.js"));
-
+                       
             bundles.Add(new ScriptBundle("~/bundles/core").Include(
-                        "~/Scripts/App/Core/Utilities.js", "~/Scripts/App/Core/Core.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/UserFriendList").Include(
-                        "~/Scripts/App/Module/References/Core.UserFriendList.js"));
+                        "~/Scripts/App/Core/namespace.js", 
+                        "~/Scripts/App/Core/core.js"));
+                        
+            bundles.Add(new ScriptBundle("~/bundles/meuMain").Include(
+                         "~/Scripts/Vendor/menu_main.js"));
+                         
+           bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/site.css"));
+                        
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿/* Menu main */
+﻿/* Main Menu */
+
 .navbar {
     box-sizing: border-box;
     display: -webkit-flex;
@@ -20,8 +21,6 @@
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -1%;
-    margin-left: -1%;
     margin-bottom:3%;
 }
 
@@ -61,8 +60,8 @@
     color:white;
 }
 
-.togle-menu {
+.toggle-menu {
     background-color:#1582dc;height:200px;width:100%;
     margin-top: -2px;
-    z-index: 99999999999;
+    z-index: 999999;
 }
