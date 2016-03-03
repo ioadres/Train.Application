@@ -5,7 +5,7 @@
     self.mainMenu = function() {};
     
     self.mainMenu.toggleMainMenu = function(ev) {              
-        $(".toggle-menu").slideToggle("slow");            
+        $(".toggle-menu").slideToggle();            
     };
         
     /* Jquery events*/

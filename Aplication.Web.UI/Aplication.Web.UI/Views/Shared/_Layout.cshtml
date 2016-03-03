@@ -6,12 +6,12 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     
-    @Styles.Render("~/Content/css")       
-    @Scripts.Render("~/bundles/jquery")     
+    @Styles.Render("~/Content/css") 
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/uuid")
     @Scripts.Render("~/bundles/core")    
-    @Scripts.Render("~/bundles/meuMain")
-    
+
 </head>
 <body>
    
@@ -20,42 +20,40 @@
         <div class="navbar-collapse navbar-border">
             <div class="content">
             <div class="row">
-                <div class="col-6">empresa</div>
+                <div class="col-6">
+                    <div class="row"><div class="col-offset-2 logo"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/79/Helmond_Sport_logo.svg/494px-Helmond_Sport_logo.svg.png" /></div></div>
+                </div>
                 <div class="col-6">@Html.Partial("_LoginPartial")</div>
             </div>            
             </div>
         </div>
         <div class="toggle-menu" style="display:none;"></div>
     </div>
-    <div>
+
+    <div class="container">
         <div class="row">
-            <div class="col-2">  
-                <div class="menu-left-content">     
-                    <nav class="row">                              
-                        <div class="col-12"><img src="http://www.vitadelia.com/images/2008/11/mujer-deportista.jpg" /> </div>                                                    
+            <div class="col-2">
+                <div class="menu-left-content">
+                    <nav class="row">
+                        <div class="col-12"><img src="http://www.vitadelia.com/images/2008/11/mujer-deportista.jpg" /> </div>
                         <ul class="col-12">
                             <li class="active">Rutinas</li>
                             <li>Dietas</li>
                             <li>Rendimiento</li>
                         </ul>
-                    </nav>                                 
+                    </nav>
                 </div>
             </div>
-            <div class="col-8">
-                <div class="container body-content">
+
+            <div class="col-7">
+                <div class="container">
                     @RenderBody()
-                    <hr />
-                    <footer>
-                        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-                    </footer>
                 </div>
             </div>
-            <div class="col-2">.col-md-4</div>
+
         </div>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>

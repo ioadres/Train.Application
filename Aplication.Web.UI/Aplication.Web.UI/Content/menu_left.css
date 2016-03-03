@@ -4,6 +4,7 @@
     border-right:1px solid #eee;
     margin-left:1px;
     color:#5F6571;
+    min-height:700px;
 }
 
 .menu-left-content img{max-width: 100%;}
