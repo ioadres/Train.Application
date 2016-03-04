@@ -1,0 +1,25 @@
+﻿
+.container-body {
+    padding:30px;
+    background-color:#EEE;
+}
+
+.container-body .block{
+    padding:30px;
+    background-color:#ffffff;
+    border-radius:8px;
+}
+
+.head-body {
+    border-bottom:1px solid #1582dc;
+    margin-bottom:20px;
+    padding-bottom:10px;
+}
+.tittle {
+    font-size:20px;
+    font-weight:600;
+}
+
+.subtittle {
+    font-size:9px;
+}

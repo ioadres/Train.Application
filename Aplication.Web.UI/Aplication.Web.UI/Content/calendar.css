@@ -1,0 +1,26 @@
+﻿.calendar {
+    padding:16px;
+    border:1px solid #eee;
+}
+.calendar .calendar-header {
+    padding-bottom:5px;
+    border-bottom:1px solid #eee;
+    margin-bottom:10px; 
+}
+.calendar .calendar-header .calendar-day-tittle {
+    font-size:17px;
+    font-weight:600;
+}
+.calendar .calendar-row-activity {
+    padding:10px;
+    border-bottom:1px dotted #0094ff;
+}
+
+.calendar .calendar-row-activity h1 {
+   font-size:15px;
+   font-weight:300;
+}
+.calendar .calendar-row-activity h2 {
+   font-size:14px;
+   font-weight:100;
+}

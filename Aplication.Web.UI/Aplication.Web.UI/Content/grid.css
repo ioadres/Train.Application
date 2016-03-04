@@ -275,13 +275,3 @@
   -webkit-box-ordinal-group: 2;
   order: 1;
 }
-
-
-.muestra {
-    border: 1px solid red;
-    height: 10px;
-}
-
-.height {
-    min-height: 150px;
-}

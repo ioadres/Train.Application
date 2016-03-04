@@ -26,8 +26,8 @@ namespace Aplication.Web.UI
                         "~/Scripts/App/Core/namespace.js", 
                         "~/Scripts/App/Core/core.js"));
                         
-            bundles.Add(new ScriptBundle("~/bundles/meuMain").Include(
-                         "~/Scripts/Vendor/menu_main.js"));
+            bundles.Add(new ScriptBundle("~/bundles/menuMain").Include(
+                         "~/Scripts/Modules/menu_main.js"));
                          
            bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/site.css"));
