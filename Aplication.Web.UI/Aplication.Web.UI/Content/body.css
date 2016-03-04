@@ -1,13 +1,14 @@
 ﻿
 .container-body {
-    padding:30px;
-    background-color:#EEE;
+    padding:30px; 
+    padding-right:0px;  
 }
 
 .container-body .block{
     padding:30px;
-    background-color:#ffffff;
-    border-radius:8px;
+    background-color:#ffffff;    
+    min-height:700px;
+    max-height:700px;
 }
 
 .head-body {
