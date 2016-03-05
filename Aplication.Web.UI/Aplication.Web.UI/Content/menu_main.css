@@ -1,4 +1,4 @@
-﻿/* Main Menu */
+﻿/* Barra menu principal */
 
 .logo {
    padding:10px;
@@ -41,18 +41,14 @@
     max-width: 100%;      
 }
 
-.nav-right {       
-        padding:0px;
-        margin: 0px;
-
-}
-
+.nav-right {padding:0px;margin: 0px;}
 .nav-right li {
     padding:8px 10px;    
-    font-size:13px;
     display:inline-table;
+    cursor:pointer;
+    color:#000;
+    transition: all ease 1s;
 }
-
 .nav-right li:last-child {
     padding:28px 31px;   
     font-weight:200;
@@ -61,7 +57,12 @@
     border-bottom: 1px solid #EEE;
     color:white;
 }
+.nav-right li:not(:last-child):hover {
+    color: #678BC1!important;
+}
 
+
+/* Menu desplegable */
 .toggle-menu {
     background-color:#9EBBD4;
     width:100%;
@@ -78,11 +79,13 @@
 .toggle-menu .item {
     border-right: 1px solid #FFFFFF;
     padding: 10px;
+    color: #6F6E6E;
 }
 .toggle-menu .item a {    
-    color: #FFFFFF;
+    color: #6F6E6E;
     text-decoration:none;
+    transition:all ease 1s;
 }
-.toggle-menu .no-border {    
-    border-right: 0px;
-}
+.toggle-menu .item a:hover{ color:#FFF; }
+.toggle-menu .item .active { color:#FFF; }
+.toggle-menu .no-border { border-right: 0px;}

@@ -1,12 +1,49 @@
 ﻿
-<ul class="nav-right">
-    <li><i class="fa fa-lightbulb-o fa-3"></i></li>
-    <li>
-        <i class="fa fa-bars fa-3" id="toggleMainMenu"></i>
-    </li>
-    <li>
-        <span>Usuario</span>       
-    </li>
-</ul>
+<div class="navbar">
+    <div class="navbar-collapse navbar-border">
+        <div class="content">
+            <div class="row">
+                
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-offset-2 logo">
+                            <a href="@Url.Action("", "Home")"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/79/Helmond_Sport_logo.svg/494px-Helmond_Sport_logo.svg.png" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 end">
+                    <ul class="nav-right">
+                        <li><i class="fa fa-3 fa-lightbulb-o"></i></li>
+                        <li>
+                            <i class="fa fa-3 fa-bars" id="toggleMainMenu"></i>
+                        </li>
+                        <li>
+                            <span>Usuario</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="toggle-menu" style="display:none;">
+        <div class="row center around">
+            <div class="col-1"></div>
+            <div class="col-2 item">
+                <a href="@Url.Action("MyCalendar", "Calendar")" class="fa fa-5 fa-calendar"></a>
+            </div>
+            <div class="col-2 item"><i class="fa fa-5 fa-list-alt "></i></div>
+            <div class="col-2 item"><i class="fa fa-5 fa-users"></i></div>
+            <div class="col-2 item"><i class="fa fa-5 fa-object-group"></i></div>
+            <div class="col-2 item no-border"><i class="fa fa-5 fa-line-chart"></i></div>
+            <div class="col-1"></div>
+        </div>
+        <div class="col-12 footer"></div>
+
+
+    </div>
+</div>
 
 @Scripts.Render("~/bundles/menuMain")

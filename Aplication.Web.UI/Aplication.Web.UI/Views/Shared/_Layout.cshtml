@@ -1,79 +1,45 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     
-    @Styles.Render("~/Content/css") 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/uuid")
-    @Scripts.Render("~/bundles/core")    
+        @Styles.Render("~/Content/css")         
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/uuid")
+        @Scripts.Render("~/bundles/core")    
 
-</head>
-<body>
+    </head>
+    <body>
    
-    <div>
-        <div class="navbar">
-            <div class="navbar-collapse navbar-border">
-                <div class="content">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="row">
-                                <div class="col-offset-2 logo"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/79/Helmond_Sport_logo.svg/494px-Helmond_Sport_logo.svg.png" /></div>
-                            </div>
+        <div>
+
+            @Html.Partial("_LoginPartial")
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        @Html.Partial("_LeftColumn")
+                    </div>
+
+                    <div class="col-10">
+                        <div class="container-body">
+                            <div class="block">@RenderBody()</div>
+
                         </div>
-                        <div class="col-6 end">@Html.Partial("_LoginPartial")</div>
                     </div>
+
                 </div>
             </div>
 
-            <div class="toggle-menu" style="display:none;">
-                <div class="row center around">
-                    <div class="col-1"></div>
-                    <div class="col-2 item">
-                        <a href="@Url.Action("MyCalendar", "Calendar")" class="fa fa-5 fa-calendar"></a>
-                    </div>
-                    <div class="col-2 item"><i class="fa fa-5 fa-list-alt "></i></div>
-                    <div class="col-2 item"><i class="fa fa-5 fa-users"></i></div>
-                    <div class="col-2 item"><i class="fa fa-5 fa-object-group"></i></div>
-                    <div class="col-2 item no-border"><i class="fa fa-5 fa-line-chart"></i></div>
-                    <div class="col-1"></div>
-                </div>
-                <div class="col-12 footer"></div>
-
-
-            </div>
+            
+        
         </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-2">
-                    <div class="menu-left-content">
-                        <nav class="row">
-                            <div class="col-12"><img src="https://entrenar.me/assets/images/landing/entrenador.png" /> </div>
-                            <ul class="col-12">
-                                <li class="active">Rutinas</li>
-                                <li>Dietas</li>
-                                <li>Rendimiento</li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+        @RenderSection("scripts", required: false)
+    </body>
 
-                <div class="col-10">
-                    <div class="container-body">
-                        <div class="block">@RenderBody()</div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    @RenderSection("scripts", required: false)
-</body>
 </html>
