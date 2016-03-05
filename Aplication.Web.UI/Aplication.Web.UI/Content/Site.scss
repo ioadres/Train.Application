@@ -1,0 +1,20 @@
+
+@import "Layout/reset.scss";
+@import "Layout/grid.scss";
+@import "Layout/body.scss";
+@import "Libraries/menu_left.scss";
+@import "Libraries/menu_main.scss";
+@import "Libraries/calendar.scss";
+
+html {
+    overflow-y: scroll;
+}
+
+html, body {   
+    height: 100%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    background-color:#EEE;
+}
+
+

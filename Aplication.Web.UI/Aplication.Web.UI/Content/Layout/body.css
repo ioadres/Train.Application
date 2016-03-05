@@ -1,0 +1,22 @@
+.container-body {
+  padding: 30px;
+  padding-right: 0px; }
+  .container-body .block {
+    padding: 30px;
+    background-color: #ffffff;
+    min-height: 650px;
+    box-sizing: border-box; }
+
+.head-body {
+  border-bottom: 1px solid #1582dc;
+  margin-bottom: 20px;
+  padding-bottom: 10px; }
+
+.tittle {
+  font-size: 20px;
+  font-weight: 600; }
+
+.subtittle {
+  font-size: 9px; }
+
+/*# sourceMappingURL=body.css.map */

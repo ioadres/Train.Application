@@ -1,0 +1,92 @@
+/* Barra menu principal */
+
+.logo {
+    padding:10px;
+    img{
+        width:17%;
+    }
+}
+ 
+.navbar {
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    -webkit-box-flex: 0;
+    flex: 0 1 auto;
+
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    background-color:#FFF;
+    .navbar-background {background-color:#BBB;}
+    .navbar-border {border-bottom: 1px solid #EEE;}
+    .navbar-collapse {
+        -ms-flex-preferred-size: 100%;
+        -webkit-flex-basis: 100%;
+        flex-basis: 100%;
+        max-width: 100%;      
+    }
+
+    .nav-right {
+        padding:0px;margin: 0px;
+        li {
+            padding:8px 10px;    
+            display:inline-table;
+            cursor:pointer;
+            color:#000;
+            transition: all ease 1s;
+        
+            &:last-child {
+                padding:28px 31px;   
+                font-weight:200;
+                font-size:16px;
+                background-color: #1582dc;
+                border-bottom: 1px solid #EEE;
+                color:white;
+            }
+            &:not(:last-child):hover {
+                color: #678BC1!important;
+            }
+        }        
+    }
+}
+
+
+
+/* Menu desplegable */
+.toggle-menu {
+    background-color:#9EBBD4;
+    width:100%;
+    margin-top: -2px;
+    z-index: 999999;
+    font-size:150px;
+    .footer{
+        background-color:#1582dc;
+        padding:10px;
+    }
+    .item {
+        border-right: 1px solid #FFFFFF;
+        padding: 10px;
+        color: #6F6E6E;
+        a {    
+            color: #6F6E6E;
+            text-decoration:none;
+            transition:all ease 1s;
+            &:hover { color:#FFF;}
+        }
+        .active { color:#FFF; }
+    }
+    .no-border { border-right: 0px;}
+}

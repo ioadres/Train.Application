@@ -256,16 +256,31 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\body.css" />
-    <Content Include="Content\calendar.css" />
-    <Content Include="Content\grid.css" />
-    <Content Include="Content\menu_left.css" />
-    <Content Include="Content\menu_main.css" />
-    <Content Include="Content\reset.css" />
+    <Content Include="Content\Layout\body.css">
+      <DependentUpon>body.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Layout\grid.css">
+      <DependentUpon>grid.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Layout\reset.css">
+      <DependentUpon>reset.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Libraries\calendar.css">
+      <DependentUpon>calendar.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Libraries\menu_left.css">
+      <DependentUpon>menu_left.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Libraries\menu_main.css">
+      <DependentUpon>menu_main.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css">
+      <DependentUpon>Site.scss</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <None Include="Content\Layout\grid.scss" />
     <Content Include="Scripts\App\Core\Core.js" />
     <Content Include="Scripts\App\Core\namespace.js" />
     <Content Include="Scripts\App\Module\UserFriendList\App.js" />
@@ -280,6 +295,12 @@
     <Content Include="Scripts\App\Module\References\Core.UserFriendList.js" />
     <Content Include="Scripts\App\Component\UserUlComponent.jsx" />
     <Content Include="Scripts\App\Component\FriendComponent.jsx" />
+    <Content Include="Content\Libraries\calendar.scss" />
+    <Content Include="Content\Libraries\menu_left.scss" />
+    <Content Include="Content\Libraries\menu_main.scss" />
+    <Content Include="Content\Site.scss" />
+    <Content Include="Content\Layout\reset.scss" />
+    <Content Include="Content\Layout\body.scss" />
     <None Include="Scripts\Lib\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Lib\jquery-1.10.2.js" />
     <Content Include="Scripts\Lib\jquery-1.10.2.min.js" />
