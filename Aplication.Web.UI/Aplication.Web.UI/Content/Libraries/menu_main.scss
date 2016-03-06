@@ -1,42 +1,27 @@
 /* Barra menu principal */
 
 .logo {
-    padding:10px;
+    margin-top: 10px;
     img{
-        width:17%;
+        min-width:70px;
+        max-width: 70px;
+        transition: all ease 1s;
     }
 }
  
 .navbar {
-    box-sizing: border-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
+    @include display-flex();
+    @include flex(1,0);
+    @include flex-horizontal-direction();
+    @include flex-wrap();
 
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    -webkit-box-flex: 0;
-    flex: 0 1 auto;
+    background-color:$primary-background-color;
 
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-
-    background-color:#FFF;
-    .navbar-background {background-color:#BBB;}
-    .navbar-border {border-bottom: 1px solid #EEE;}
+    .navbar-background {background-color:$primary-background-color;}
+    .navbar-border {@include border(1px, solid, $primary-border-color, 'bottom')}
     .navbar-collapse {
-        -ms-flex-preferred-size: 100%;
-        -webkit-flex-basis: 100%;
-        flex-basis: 100%;
-        max-width: 100%;      
+      @include flex-basis(100%);
+      max-width: 100%;      
     }
 
     .nav-right {
@@ -46,15 +31,17 @@
             display:inline-table;
             cursor:pointer;
             color:#000;
+            font-size: 16px;
             transition: all ease 1s;
         
             &:last-child {
-                padding:28px 31px;   
                 font-weight:200;
-                font-size:16px;
-                background-color: #1582dc;
-                border-bottom: 1px solid #EEE;
+                font-size:$font-size-level1;
+                background-color: $secundary-color;
                 color:white;
+                @include border(1px, solid, $primary-border-color, 'bottom');
+                padding:28px 31px;   
+                
             }
             &:not(:last-child):hover {
                 color: #678BC1!important;
@@ -73,7 +60,7 @@
     z-index: 999999;
     font-size:150px;
     .footer{
-        background-color:#1582dc;
+        background-color:$secundary-color;
         padding:10px;
     }
     .item {

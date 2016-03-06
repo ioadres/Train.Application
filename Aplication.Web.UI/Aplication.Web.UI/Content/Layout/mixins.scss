@@ -1,0 +1,141 @@
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+
+// Animation 
+@mixin animation($name, $duration: 1000ms, $iterations: infinite, $timing-function: ease, $delay: 0ms) {
+  // There is a FF bug that requires all time values to have units, even 0 !!!!!!
+  -webkit-animation: $name $duration $iterations $timing-function $delay;
+  -moz-animation: $name $duration $iterations $timing-function $delay;
+  -o-animation: $name $duration $iterations $timing-function $delay;
+  animation: $name $duration $iterations $timing-function $delay;
+}
+
+
+// Event
+@mixin on-event($self: false) {
+    @if $self {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    } @else {
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
+}
+
+@mixin border($width, $style, $color, $element) {
+    @if ($element == 'top') {
+        border-top-width:$width;
+        border-top-style:$style;
+        border-top-color:$color;
+    }
+    @if ($element == 'left') {
+        border-left-width:$width;
+        border-left-style:$style;
+        border-left-color:$color;
+    }
+    @if ($element == 'bottom') {
+        border-bottom-width:$width;
+        border-bottom-style:$style;
+        border-bottom-color:$color;
+    }
+    @if ($element == 'right') {
+        border-right-width:$width;
+        border-right-style:$style;
+        border-right-color:$color;
+    }    
+
+    @if ($element == 'false') {
+        border: $width $style $color;
+    }
+}
+
+
+//***************************** GRID *********************************************//
+@mixin display-flex() {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+}
+
+@mixin flex($a,$b) {
+    -webkit-flex: $a $b auto;
+    -ms-flex: $a $b auto;
+    -webkit-box-flex: 0;
+    flex: $a $b auto;
+}
+
+@mixin flex-horizontal-direction() {
+    -webkit-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+@mixin flex-wrap() {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@mixin flex-row-reverse() {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    flex-direction: row-reverse;
+}
+
+@mixin flex-column-reverse() {
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    flex-direction: column-reverse;
+}
+
+
+// Columns
+@mixin flex-grow($value) {
+    -webkit-flex-grow: $value;
+    -ms-flex-positive: $value;
+    -webkit-box-flex: $value;
+    flex-grow: $value;
+}
+
+@mixin flex-basis($value) {
+    -ms-flex-preferred-size: $value;
+    -webkit-flex-basis: $value;
+    flex-basis: $value;
+}
+
+@mixin flex-column-width($value) {
+    -ms-flex-preferred-size: $value;
+    -webkit-flex-basis: $value;
+    flex-basis:$value;
+    max-width: $value;
+}
+
+
+//***************************** ENDGRID *********************************************//

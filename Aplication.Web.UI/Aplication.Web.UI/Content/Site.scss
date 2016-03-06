@@ -1,7 +1,10 @@
+@import "Layout/property.scss";
+@import "Layout/mixins.scss";
 
 @import "Layout/reset.scss";
 @import "Layout/grid.scss";
 @import "Layout/body.scss";
+
 @import "Libraries/menu_left.scss";
 @import "Libraries/menu_main.scss";
 @import "Libraries/calendar.scss";
@@ -12,9 +15,12 @@ html {
 
 html, body {   
     height: 100%;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 13px;
-    background-color:#EEE;
+    font-family : $font-primary-family;
+    font-size: $font-primary-size;
+    background-color:$body-background-color;
+    color: $primary-font-color;
+    text-rendering: optimizeLegibility; 
+    -webkit-font-smoothing: antialiased;
 }
 
 

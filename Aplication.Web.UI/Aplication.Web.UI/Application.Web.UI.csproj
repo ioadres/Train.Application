@@ -262,6 +262,12 @@
     <Content Include="Content\Layout\grid.css">
       <DependentUpon>grid.scss</DependentUpon>
     </Content>
+    <Content Include="Content\Layout\mixins.css">
+      <DependentUpon>mixins.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Layout\property.css">
+      <DependentUpon>property.scss</DependentUpon>
+    </Content>
     <Content Include="Content\Layout\reset.css">
       <DependentUpon>reset.scss</DependentUpon>
     </Content>
@@ -301,6 +307,8 @@
     <Content Include="Content\Site.scss" />
     <Content Include="Content\Layout\reset.scss" />
     <Content Include="Content\Layout\body.scss" />
+    <Content Include="Content\Layout\mixins.scss" />
+    <Content Include="Content\Layout\property.scss" />
     <None Include="Scripts\Lib\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Lib\jquery-1.10.2.js" />
     <Content Include="Scripts\Lib\jquery-1.10.2.min.js" />

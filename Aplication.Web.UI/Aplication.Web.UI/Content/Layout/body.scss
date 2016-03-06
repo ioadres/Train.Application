@@ -1,19 +1,19 @@
-
 .container-body {
     padding:30px; 
-    padding-right:0px; 
+    padding-right:0px;
+     
         .block {
-        padding:30px;
-        background-color:#ffffff;    
-        min-height:650px;
-        box-sizing:border-box;
-    } 
+            padding:$padding-block-default;
+            background-color: $primary-background-color;
+            min-height:$content-min-height;
+            box-sizing:border-box;
+        } 
 }
 
 .head-body {
-    border-bottom:1px solid #1582dc;
-    margin-bottom:20px;
-    padding-bottom:10px;
+    @include border(2px, solid, $primary-border-color,'bottom');
+    margin-bottom:$margin-default;
+    padding-bottom:$margin-default;
 }
 
 .tittle {
@@ -24,3 +24,4 @@
 .subtittle {
     font-size:9px;
 }
+

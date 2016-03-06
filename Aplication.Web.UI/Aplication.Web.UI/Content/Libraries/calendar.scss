@@ -1,35 +1,38 @@
 ﻿.calendar {
-    padding:16px;
+    padding: $margin-default;
 
-    .calendar-header {
-        padding-bottom:5px;
-        border-bottom:1px solid #eee;
-        margin-bottom:10px; 
-
+    .calendar-header {        
+        @include border(1px, solid, $body-background-color,'bottom');
+        padding-bottom:$padding-element-default;
+        margin-bottom:$margin-default; 
+        
         .calendar-day-tittle {
-            font-size:17px;
+            font-size:$font-size-level1;
             font-weight:600;
         }
 
     }
 
     .calendar-row-activity {
-        padding:10px;
-        border-bottom:1px dotted #0094ff;
+        
+        @include border(3px, double, $secundary-color,'bottom');
+        padding:$margin-default;
+
         h1 {
-            font-size:15px;
+            font-size:$font-size-level2;
             font-weight:300;
         }
+
         h2 {
-            font-size:14px;
+            font-size:$font-size-level1;
             font-weight:100;
         }
 
     }
 
+    // Calendar days, month , year
     .calendar-month {
-        border-bottom:1px dotted #0094ff;
-        padding-bottom:5px;
+        padding-bottom:$padding-element-default;        
     }
 
     .arrow-left {
@@ -47,23 +50,24 @@
     }
 
     .calendar-helper {
-        border:1px solid #eee;
+        @include border(1px, solid, $body-background-color, 'false');
     }
 
     .calendar-row {
-        padding:5px;
+        padding:$padding-block-default;
     }
 
     .calendar-column {
-        padding:5px;
-        border:1px solid #eee;
+        padding:$padding-element-default;        
         text-align:center;
+        @include border(1px, solid, $body-background-color, 'false');
+
     }
 
     .calendar-column-header {
-        padding:5px;
-        border-bottom:1px solid #eee;
+        padding:$padding-element-default;
         text-align:center;
+        @include border(1px, solid, $body-background-color, 'bottom');
     }
 }
 

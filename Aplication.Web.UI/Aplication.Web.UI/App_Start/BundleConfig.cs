@@ -30,7 +30,7 @@ namespace Aplication.Web.UI
                          "~/Scripts/Modules/menu_main.js"));
                          
            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/site.css"));
+                      "~/Content/Site.css"));
                         
         }
     }
