@@ -1,79 +1,69 @@
-/* Barra menu principal */
-.logo {
-  padding: 10px; }
-  .logo img {
-    width: 17%; }
+/*
+Error: Undefined mixin 'display-flex'.
+        on line 13 of \\psf\dev\Train.Application\Aplication.Web.UI\Aplication.Web.UI\Content\Libraries\menu_main.scss, in `display-flex'
+        from line 13 of \\psf\dev\Train.Application\Aplication.Web.UI\Aplication.Web.UI\Content\Libraries\menu_main.scss
 
-.navbar {
-  box-sizing: border-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  -webkit-box-flex: 0;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  background-color: #FFF; }
-  .navbar .navbar-background {
-    background-color: #BBB; }
-  .navbar .navbar-border {
-    border-bottom: 1px solid #EEE; }
-  .navbar .navbar-collapse {
-    -ms-flex-preferred-size: 100%;
-    -webkit-flex-basis: 100%;
-    flex-basis: 100%;
-    max-width: 100%; }
-  .navbar .nav-right {
-    padding: 0px;
-    margin: 0px; }
-    .navbar .nav-right li {
-      padding: 8px 10px;
-      display: inline-table;
-      cursor: pointer;
-      color: #000;
-      transition: all ease 1s; }
-      .navbar .nav-right li:last-child {
-        padding: 28px 31px;
-        font-weight: 200;
-        font-size: 16px;
-        background-color: #1582dc;
-        border-bottom: 1px solid #EEE;
-        color: white; }
-      .navbar .nav-right li:not(:last-child):hover {
-        color: #678BC1 !important; }
+8:         transition: all ease 1s;
+9:     }
+10: }
+11:  
+12: .navbar {
+13:     @include display-flex();
+14:     @include flex(1,0);
+15:     @include flex-horizontal-direction();
+16:     @include flex-wrap();
+17: 
+18:     background-color:$primary-background-color;
 
-/* Menu desplegable */
-.toggle-menu {
-  background-color: #9EBBD4;
-  width: 100%;
-  margin-top: -2px;
-  z-index: 999999;
-  font-size: 150px; }
-  .toggle-menu .footer {
-    background-color: #1582dc;
-    padding: 10px; }
-  .toggle-menu .item {
-    border-right: 1px solid #FFFFFF;
-    padding: 10px;
-    color: #6F6E6E; }
-    .toggle-menu .item a {
-      color: #6F6E6E;
-      text-decoration: none;
-      transition: all ease 1s; }
-      .toggle-menu .item a:hover {
-        color: #FFF; }
-    .toggle-menu .item .active {
-      color: #FFF; }
-  .toggle-menu .no-border {
-    border-right: 0px; }
-
-/*# sourceMappingURL=menu_main.css.map */
+Backtrace:
+\\psf\dev\Train.Application\Aplication.Web.UI\Aplication.Web.UI\Content\Libraries\menu_main.scss:13:in `display-flex'
+\\psf\dev\Train.Application\Aplication.Web.UI\Aplication.Web.UI\Content\Libraries\menu_main.scss:13
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:338:in `block in visit_mixin'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:98:in `with_mixin'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:336:in `visit_mixin'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `map'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/engine.rb:285:in `render_with_sourcemap'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/exec/sass_scss.rb:375:in `run'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/exec/sass_scss.rb:62:in `process_result'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/exec/base.rb:40:in `parse'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/exec/base.rb:19:in `parse!'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/bin/sass:13:in `<top (required)>'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/bin/sass:19:in `load'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/bin/sass:19:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'display-flex'.\A         on line 13 of \\psf\dev\Train.Application\Aplication.Web.UI\Aplication.Web.UI\Content\Libraries\menu_main.scss, in `display-flex'\A         from line 13 of \\psf\dev\Train.Application\Aplication.Web.UI\Aplication.Web.UI\Content\Libraries\menu_main.scss\A \A 8:         transition: all ease 1s;\A 9:     }\A 10: }\A 11:  \A 12: .navbar {\A 13:     @include display-flex();\A 14:     @include flex(1,0);\A 15:     @include flex-horizontal-direction();\A 16:     @include flex-wrap();\A 17: \A 18:     background-color:$primary-background-color;"; }

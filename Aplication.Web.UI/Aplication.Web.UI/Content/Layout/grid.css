@@ -1,237 +1,69 @@
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 2%;
-  padding-left: 2%;
-  max-width: 98%; }
+/*
+Error: Undefined mixin 'display-flex'.
+        on line 10 of \\psf\dev\Train.Application\Aplication.Web.UI\Aplication.Web.UI\Content\Layout\grid.scss, in `display-flex'
+        from line 10 of \\psf\dev\Train.Application\Aplication.Web.UI\Aplication.Web.UI\Content\Layout\grid.scss
 
-.row {
-  box-sizing: border-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  -webkit-box-flex: 0;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+5: }
+6: 
+7: .row {
+8:   box-sizing: border-box;
+9: 
+10:   @include display-flex();
+11:   @include flex(0,1);
+12:   @include flex-horizontal-direction();
+13:   @include flex-wrap();
+14:   
+15: }
 
-.row.reverse {
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  flex-direction: row-reverse; }
-
-.col.reverse {
-  -webkit-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-  flex-direction: column-reverse; }
-
-.col-0,
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  -webkit-box-flex: 0;
-  flex: 0 0 auto; }
-
-.col-0 {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  -webkit-box-flex: 1;
-  flex-grow: 1;
-  -ms-flex-preferred-size: 0;
-  -webkit-flex-basis: 0;
-  flex-basis: 0;
-  max-width: 100%; }
-
-.col-1 {
-  -ms-flex-preferred-size: 8.333%;
-  -webkit-flex-basis: 8.333%;
-  flex-basis: 8.333%;
-  max-width: 8.333%; }
-
-.col-2 {
-  -ms-flex-preferred-size: 16.667%;
-  -webkit-flex-basis: 16.667%;
-  flex-basis: 16.667%;
-  max-width: 16.667%; }
-
-.col-3 {
-  -ms-flex-preferred-size: 25%;
-  -webkit-flex-basis: 25%;
-  flex-basis: 25%;
-  max-width: 25%; }
-
-.col-4 {
-  -ms-flex-preferred-size: 33.333%;
-  -webkit-flex-basis: 33.333%;
-  flex-basis: 33.333%;
-  max-width: 33.333%; }
-
-.col-5 {
-  -ms-flex-preferred-size: 41.667%;
-  -webkit-flex-basis: 41.667%;
-  flex-basis: 41.667%;
-  max-width: 41.667%; }
-
-.col-6 {
-  -ms-flex-preferred-size: 50%;
-  -webkit-flex-basis: 50%;
-  flex-basis: 50%;
-  max-width: 50%; }
-
-.col-7 {
-  -ms-flex-preferred-size: 58.333%;
-  -webkit-flex-basis: 58.333%;
-  flex-basis: 58.333%;
-  max-width: 58.333%; }
-
-.col-8 {
-  -ms-flex-preferred-size: 66.667%;
-  -webkit-flex-basis: 66.667%;
-  flex-basis: 66.667%;
-  max-width: 66.667%; }
-
-.col-9 {
-  -ms-flex-preferred-size: 75%;
-  -webkit-flex-basis: 75%;
-  flex-basis: 75%;
-  max-width: 75%; }
-
-.col-10 {
-  -ms-flex-preferred-size: 83.333%;
-  -webkit-flex-basis: 83.333%;
-  flex-basis: 83.333%;
-  max-width: 83.333%; }
-
-.col-11 {
-  -ms-flex-preferred-size: 91.667%;
-  -webkit-flex-basis: 91.667%;
-  flex-basis: 91.667%;
-  max-width: 91.667%; }
-
-.col-12 {
-  -ms-flex-preferred-size: 100%;
-  -webkit-flex-basis: 100%;
-  flex-basis: 100%;
-  max-width: 100%; }
-
-.col-offset-1 {
-  margin-left: 8.333%; }
-
-.col-offset-2 {
-  margin-left: 16.667%; }
-
-.col-offset-3 {
-  margin-left: 25%; }
-
-.col-offset-4 {
-  margin-left: 33.333%; }
-
-.col-offset-5 {
-  margin-left: 41.667%; }
-
-.col-offset-6 {
-  margin-left: 50%; }
-
-.col-offset-7 {
-  margin-left: 58.333%; }
-
-.col-offset-8 {
-  margin-left: 66.667%; }
-
-.col-offset-9 {
-  margin-left: 75%; }
-
-.col-offset-10 {
-  margin-left: 83.333%; }
-
-.col-offset-11 {
-  margin-left: 91.667%; }
-
-.start {
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  -webkit-box-pack: start;
-  justify-content: flex-start;
-  text-align: start; }
-
-.center {
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  text-align: center; }
-
-.end {
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  -webkit-box-pack: end;
-  justify-content: flex-end;
-  text-align: end; }
-
-.top {
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  -webkit-box-align: start;
-  align-items: flex-start; }
-
-.middle {
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-align: center;
-  align-items: center; }
-
-.bottom {
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  -webkit-box-align: end;
-  align-items: flex-end; }
-
-.around {
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around; }
-
-.between {
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  -webkit-box-pack: justify;
-  justify-content: space-between; }
-
-.first {
-  -webkit-order: -1;
-  -ms-flex-order: -1;
-  -webkit-box-ordinal-group: 0;
-  order: -1; }
-
-.last {
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  -webkit-box-ordinal-group: 2;
-  order: 1; }
-
-/*# sourceMappingURL=grid.css.map */
+Backtrace:
+\\psf\dev\Train.Application\Aplication.Web.UI\Aplication.Web.UI\Content\Layout\grid.scss:10:in `display-flex'
+\\psf\dev\Train.Application\Aplication.Web.UI\Aplication.Web.UI\Content\Layout\grid.scss:10
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:338:in `block in visit_mixin'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:98:in `with_mixin'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:336:in `visit_mixin'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `map'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/engine.rb:285:in `render_with_sourcemap'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/exec/sass_scss.rb:375:in `run'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/exec/sass_scss.rb:62:in `process_result'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/exec/base.rb:40:in `parse'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/lib/sass/exec/base.rb:19:in `parse!'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.3/bin/sass:13:in `<top (required)>'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/bin/sass:19:in `load'
+C:/Users/dev/AppData/Local/Temp/Mindscape/WebWorkbench/Ruby193/Ruby193/bin/sass:19:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'display-flex'.\A         on line 10 of \\psf\dev\Train.Application\Aplication.Web.UI\Aplication.Web.UI\Content\Layout\grid.scss, in `display-flex'\A         from line 10 of \\psf\dev\Train.Application\Aplication.Web.UI\Aplication.Web.UI\Content\Layout\grid.scss\A \A 5: }\A 6: \A 7: .row {\A 8:   box-sizing: border-box;\A 9: \A 10:   @include display-flex();\A 11:   @include flex(0,1);\A 12:   @include flex-horizontal-direction();\A 13:   @include flex-wrap();\A 14:   \A 15: }"; }
