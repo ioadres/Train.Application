@@ -31,7 +31,7 @@
             display:inline-table;
             cursor:pointer;
             color:#000;
-            font-size: 16px;
+            font-size: 9em;
             transition: all ease 1s;
         
             &:last-child {
@@ -58,7 +58,7 @@
     width:100%;
     margin-top: -2px!important;
     z-index: 999999;
-    font-size:150px;
+    font-size: 7vw;
     .footer{
         background-color:$secundary-color;
         padding:10px;
@@ -66,6 +66,8 @@
     .item {
         border-right: 1px solid #FFFFFF;
         padding: 10px;
+        padding-right:40px;
+        padding-left:40px;
         color: #6F6E6E;
         a {    
             color: #6F6E6E;

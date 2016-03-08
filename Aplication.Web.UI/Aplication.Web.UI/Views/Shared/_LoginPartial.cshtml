@@ -1,4 +1,30 @@
 ﻿
+<style>
+
+@@media (max-width: 730px) {
+     
+    .toggle-menu .list  {
+       display:none;
+    }
+     
+    .toggle-menu .list-responsive  {
+        display:block;
+    }
+    .toggle-menu .list-responsive .item:not(:last-child){
+        border-bottom: 2px solid #fff;
+    }
+}
+
+@@media (min-width: 731px) {    
+    
+    .toggle-menu .list-responsive  {
+       display:none;
+    }
+    
+}
+
+</style>
+
 <div class="navbar">
     <div class="navbar-collapse navbar-border">
         <div class="content">
@@ -29,16 +55,25 @@
     </div>
 
     <div class="toggle-menu" style="display:none;">
-        <div class="row center around">
-            <div class="col-1"></div>
-            <div class="col-2 item">
-                <a href="@Url.Action("MyCalendar", "Calendar")" class="fa fa-5 fa-calendar"></a>
+        <div class="row center list">           
+            <div class="col-1 item">
+                <a href="@Url.Action("MyCalendar", "Calendar")" class="fa fa-md fa-calendar"></a>
             </div>
-            <div class="col-2 item"><i class="fa fa-5 fa-list-alt "></i></div>
-            <div class="col-2 item"><i class="fa fa-5 fa-users"></i></div>
-            <div class="col-2 item"><i class="fa fa-5 fa-object-group"></i></div>
-            <div class="col-2 item no-border"><i class="fa fa-5 fa-line-chart"></i></div>
-            <div class="col-1"></div>
+            <div class="col-1 item"><a href="@Url.Action("MyCalendar", "Calendar")" class="fa fa-list-alt"></a></div>
+            <div class="col-1 item"><a href="@Url.Action("MyCalendar", "Calendar")" class="fa fa-users"></a></div>
+            <div class="col-1 item"><a href="@Url.Action("MyCalendar", "Calendar")" class="fa fa-object-group"></a></div>
+            <div class="col-1 item no-border"><a href="@Url.Action("MyCalendar", "Calendar")" class="fa fa-line-chart"></a></div>          
+          
+        </div>
+        <div class="row list-responsive">
+           
+            <div class="col-12 item">
+                <a href="@Url.Action("MyCalendar", "Calendar")" class="fa fa-md fa-calendar"></a>
+            </div>
+            <div class="col-12 item"><a href="@Url.Action("MyCalendar", "Calendar")"> <i class="fa fa-list-alt"></i>&nbsp; Calendario</a></div>
+            <div class="col-12 item"><a href="@Url.Action("MyCalendar", "Calendar")"> <i class="fa fa-users"></i>&nbsp; Usuario</a></div>
+            <div class="col-12 item"><a href="@Url.Action("MyCalendar", "Calendar")"> <i class="fa fa-object-group"></i></a></div>
+            <div class="col-12 item"><a href="@Url.Action("MyCalendar", "Calendar")"> <i class="fa fa-line-chart"></i> &nbsp;</a></div>
         </div>
         <div class="col-12 footer"></div>
 

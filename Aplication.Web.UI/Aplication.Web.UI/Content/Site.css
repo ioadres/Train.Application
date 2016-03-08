@@ -308,12 +308,13 @@ table {
   top: 0px;
   background-color: #545454;
   opacity: 0.6; }
-  .loading img {
-    width: 150px;
+  .loading i {
     position: absolute;
-    top: 50%;
+    top: 31%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    font-size: 12em;
+    color: blue; }
 
 /* Menu left*/
 .menu-left-content {
@@ -400,7 +401,7 @@ table {
       display: inline-table;
       cursor: pointer;
       color: #000;
-      font-size: 16px;
+      font-size: 21px;
       transition: all ease 1s; }
       .navbar .nav-right li:last-child {
         font-weight: 200;
@@ -420,13 +421,15 @@ table {
   width: 100%;
   margin-top: -2px!important;
   z-index: 999999;
-  font-size: 150px; }
+  font-size: 7vw; }
   .toggle-menu .footer {
     background-color: #0094ff;
     padding: 10px; }
   .toggle-menu .item {
     border-right: 1px solid #FFFFFF;
     padding: 10px;
+    padding-right:40px;
+    padding-left:40px;
     color: #6F6E6E; }
     .toggle-menu .item a {
       color: #6F6E6E;

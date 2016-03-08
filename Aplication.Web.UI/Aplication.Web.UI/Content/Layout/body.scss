@@ -32,8 +32,12 @@
     top: 0px;
     background-color: #545454;
     opacity: 0.6;
-    img {
-       width: 150px;
+    i {
+           /* width: 150px; */
+        position: absolute;
+        font-size: 12em;
+        color: blue;
+
        @include centerer(true,true);
     }
 }
