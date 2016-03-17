@@ -6,20 +6,19 @@ app.core = app.core || {};
 
     app.core.framework = app.core.framework || {};
     var framework = app.core.framework;
+    framework.scriptsPath = {};
 
     initialize(framework);
 
 
     function initialize(framework) {
         
-        var scriptManager = new ScriptManager();        
+        var scriptManager = new ScriptManager(framework);        
         var moduleManager = new ModuleManger(scriptManager);
         framework.register = moduleManager.register;
 
-        /*var initCoreComponents = new InitCoreComponents(scriptManager);
-            initCoreComponents.init();*/
-
-
+        var initCoreComponents = new InitCoreComponents(scriptManager);
+        initCoreComponents.init();
     };
 
     function ModuleManger(scriptManager) {
@@ -28,7 +27,7 @@ app.core = app.core || {};
         self.register = function (params) {
             //Errors
             self.errorContorl(params);
-            loadModule(params);
+            self.loadModule(params);
         }
 
         self.errorContorl = function errorControl(module) { 
@@ -38,7 +37,7 @@ app.core = app.core || {};
             }            
         };
 
-        this.loadModule = function loadModule(module) {
+        self.loadModule = function loadModule(module) {
             
             // LoadModule
             var split = module['module'].split('.');
@@ -53,9 +52,10 @@ app.core = app.core || {};
             }
             
             // Init
-            if (module['collaborators'] != undefined) loadCollaborators(parent, module['collaborators']);
-            if (module['definition'] != undefined) loadDefinition(parent, module['definition']);
-            if (module['initializer'] != undefined) loadDefinition(parent, module['initializer']);
+            if (module['collaborators'] != undefined) self.loadCollaborators(parent, module['collaborators']);
+            if (module['definition'] != undefined) self.loadDefinition(parent, module['definition']);
+            if (module['initializer'] != undefined) self.loadInitializer(module['initializer']);
+            if (module['path'] != undefined) scriptManager.loadPath(module['path']);
         };
 
         self.loadCollaborators = function loadCollaborators(currentModule, arg) {
@@ -99,16 +99,22 @@ app.core = app.core || {};
         
     };
 
-    function ScriptManager() {
-        var self = this;
-        var scriptsPath = {};
+    function ScriptManager(framework) {
+        var self = this;       
 
-        self.loadPath = function loadPath(path, type) {
+        self.loadPath = function loadPath(path) {
                 var script = document.currentScript;
                 var fullUrl = script.src;
                 var fullUrl = fullUrl.split('/').pop();
+
+                if (framework.scriptsPath[fullUrl] == undefined) {
+                    framework.scriptsPath[fullUrl] = [];
+                    framework.scriptsPath[fullUrl].index = 0;
+                }
+
                 //TODO: comprobar que no haya sido ya cargado anteriormente ya el script
-                scriptsPath[fullUrl][scriptsPath.lenght] = path;
+                framework.scriptsPath[fullUrl][framework.scriptsPath[fullUrl].index] = path;
+                framework.scriptsPath[fullUrl].index++;
         }
 
         self.registerJs = function (path, filesJs, index) {
@@ -122,8 +128,8 @@ app.core = app.core || {};
         }
 
         self.loadScript = function(scriptName) {
-            var pathScript = self.temp[path][0];
-            self.registerJs(pathScript, scriptsPath[scriptName], 0);
+            var pathScript = framework.scriptsPath[scriptName][0];
+            self.registerJs(pathScript, framework.scriptsPath[scriptName], 0);
         }
 
         return self;
@@ -135,7 +141,7 @@ app.core = app.core || {};
 
         self.init = function () {
             var paths = [];
-            paths[0] = "http://127.0.0.1:8080/Module/References/Core.UserFriendList.js";
+            paths[0] = "http://localhost:8080/Scripts/App/Module/References/Core.UserFriendList.js";
 
             for (var index = 0; index < paths.length; index++) {
                 var script = document.createElement('script');

@@ -1,14 +1,14 @@
 ﻿(function () {
     'use strict';
-
+    
     app.core.framework.register({
         module: "app.core.framework.components.FriendComponent",
-        path: "/Scripts/App/Component/FriendComponent.js"
+        path: "/Scripts/App/Component/FriendComponent.jsx"
     });
 
     app.core.framework.register({
         module: "app.core.framework.components.UserUlComponent",
-        path: "/Scripts/App/Component/UserUlComponent.js"
+        path: "/Scripts/App/Component/UserUlComponent.jsx"
     });
 
     app.core.framework.register({
