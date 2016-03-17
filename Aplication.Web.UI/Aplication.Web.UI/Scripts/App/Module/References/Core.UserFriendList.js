@@ -3,12 +3,12 @@
 
     app.core.framework.register({
         module: "app.core.framework.components.FriendComponent",
-        path: "/Scripts/App/Component/FriendComponent.jsx"
+        path: "/Scripts/App/Component/FriendComponent.js"
     });
 
     app.core.framework.register({
         module: "app.core.framework.components.UserUlComponent",
-        path: "/Scripts/App/Component/UserUlComponent.jsx"
+        path: "/Scripts/App/Component/UserUlComponent.js"
     });
 
     app.core.framework.register({
