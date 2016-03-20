@@ -25,6 +25,10 @@ namespace Aplication.Web.UI
             bundles.Add(new ScriptBundle("~/bundles/core").Include(
                         "~/Scripts/App/Core/namespace.js", 
                         "~/Scripts/App/Core/core.js"));
+
+ 
+             bundles.Add(new ScriptBundle("~/bundles/UserFriendList").Include(
+                         "~/Scripts/App/Module/References/Core.UserFriendList.js"));                        
                         
             bundles.Add(new ScriptBundle("~/bundles/menuMain").Include(
                          "~/Scripts/Modules/menu_main.js"));

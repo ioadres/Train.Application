@@ -1,6 +1,6 @@
 ﻿(function () {
     'use strict';
-
+    
     app.core.framework.register({
         module: "app.core.framework.components.FriendComponent",
         path: "/Scripts/App/Component/FriendComponent.jsx"
