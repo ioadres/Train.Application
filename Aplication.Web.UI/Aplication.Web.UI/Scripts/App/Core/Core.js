@@ -1,10 +1,6 @@
-﻿var app = app || {};
-app.core = app.core || {};
-
-(function () {
+﻿(function () {
     'use strict';
-
-    app.core.framework = app.core.framework || {};
+    
     var framework = app.core.framework;
     framework.scriptsPath = {};
 
@@ -18,6 +14,7 @@ app.core = app.core || {};
         framework.register = moduleManager.register;
 
         var initCoreComponents = new InitCoreComponents(scriptManager);
+
         initCoreComponents.init();
     };
 
@@ -50,7 +47,7 @@ app.core = app.core || {};
                 parent[current] = parent[current] || {};
                 parent = parent[current];
             }
-            
+
             // Init
             if (module['collaborators'] != undefined) self.loadCollaborators(parent, module['collaborators']);
             if (module['definition'] != undefined) self.loadDefinition(parent, module['definition']);
@@ -95,26 +92,33 @@ app.core = app.core || {};
             parent.definition();
         }
 
-        return self;
-        
+        return self;        
     };
 
     function ScriptManager(framework) {
         var self = this;       
 
         self.loadPath = function loadPath(path) {
-                var script = document.currentScript;
-                var fullUrl = script.src;
-                var fullUrl = fullUrl.split('/').pop();
+            var script = document.currentScript;
+            var fullUrl = script.src;
+            var fullUrl = fullUrl.split('/').pop();
 
-                if (framework.scriptsPath[fullUrl] == undefined) {
-                    framework.scriptsPath[fullUrl] = [];
-                    framework.scriptsPath[fullUrl].index = 0;
-                }
-
+            if (framework.scriptsPath[fullUrl] == undefined) {
+                framework.scriptsPath[fullUrl] = [];
+                framework.scriptsPath[fullUrl].index = 0;
+            }
+          
                 //TODO: comprobar que no haya sido ya cargado anteriormente ya el script
                 framework.scriptsPath[fullUrl][framework.scriptsPath[fullUrl].index] = path;
                 framework.scriptsPath[fullUrl].index++;
+            
+        }
+        
+        self.checkIfPathIsLoad = function(path, module) {
+            for(var i = 0; i < framework.scriptsPath[module].index; i++) {
+                if (framework.scriptsPath[module][i] === path) return true;
+            }
+            return false;
         }
 
         self.registerJs = function (path, filesJs, index) {
@@ -184,5 +188,5 @@ app.core = app.core || {};
         };
     };
 
-}(app.core));
+}());
 
