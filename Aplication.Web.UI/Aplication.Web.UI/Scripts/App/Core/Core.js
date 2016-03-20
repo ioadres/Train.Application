@@ -11,11 +11,11 @@
         
         var scriptManager = new ScriptManager(framework);        
         var moduleManager = new ModuleManger(scriptManager);
-        framework.register = moduleManager.register;
-
         var initCoreComponents = new InitCoreComponents(scriptManager);
 
-        initCoreComponents.init();
+        framework.register = moduleManager.register;
+        framework.init = initCoreComponents.init;
+        framework.init();
     };
 
     function ModuleManger(scriptManager) {
@@ -95,27 +95,28 @@
         return self;        
     };
 
-    function ScriptManager(framework) {
-        var self = this;       
+    function ScriptManager() {
+        var self = this;
+        var scriptsPath = framework.scriptsPath;
 
         self.loadPath = function loadPath(path) {
             var script = document.currentScript;
             var fullUrl = script.src;
             var fullUrl = fullUrl.split('/').pop();
 
-            if (framework.scriptsPath[fullUrl] == undefined) {
-                framework.scriptsPath[fullUrl] = [];
-                framework.scriptsPath[fullUrl].index = 0;
+            if (scriptsPath[fullUrl] == undefined) {
+                scriptsPath[fullUrl] = [];
+                scriptsPath[fullUrl].index = 0;
             }
-          
-                //TODO: comprobar que no haya sido ya cargado anteriormente ya el script
-                framework.scriptsPath[fullUrl][framework.scriptsPath[fullUrl].index] = path;
-                framework.scriptsPath[fullUrl].index++;
-            
+
+            if (!self.checkIfPathIsLoad(fullUrl, path)) {
+                scriptsPath[fullUrl][scriptsPath[fullUrl].index] = path;
+                scriptsPath[fullUrl].index++;
+            }
         }
-        
-        self.checkIfPathIsLoad = function(path, module) {
-            for(var i = 0; i < framework.scriptsPath[module].index; i++) {
+
+        self.checkIfPathIsLoad = function (module, path) {
+            for (var i = 0; i < framework.scriptsPath[module].index; i++) {
                 if (framework.scriptsPath[module][i] === path) return true;
             }
             return false;
@@ -131,60 +132,53 @@
             document.getElementsByTagName('head')[0].appendChild(script);
         }
 
-        self.loadScript = function(scriptName) {
-            var pathScript = framework.scriptsPath[scriptName][0];
-            self.registerJs(pathScript, framework.scriptsPath[scriptName], 0);
+        self.loadScript = function (scriptName) {
+            if (framework.scriptsPath[scriptName] != undefined) {
+                var pathScript = framework.scriptsPath[scriptName][0];
+                self.registerJs(pathScript, framework.scriptsPath[scriptName], 0);
+            }
+            return self;
         }
-
-        return self;
     };
 
     function InitCoreComponents(scriptManager) {
-
         var self = this;
-
         self.init = function () {
-            var paths = [];
-            paths[0] = "http://localhost:8080/Scripts/App/Module/References/Core.UserFriendList.js";
+            $(function () {
+                var paths =[];
+                paths[0]= "Core.UserFriendList.js";
+                paths[1]= "Core.UserFriendList2.js";
 
-            for (var index = 0; index < paths.length; index++) {
-                var script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.async = true;
-                script.src = paths[index];
-                document.getElementsByTagName('head')[0].appendChild(script);
-
-                script.onload = function () {
-                    var scriptName = paths[0].split('/').pop();
+                for (var index = 0; index < paths.length; index++) {
+                    var scriptName = paths[index];
                     scriptManager.loadScript(scriptName);
-                };
-            }
+                }
+            });
         };
-
         return self;
+};
 
-    };
+function Promise() {
+    var self = this;
+    var resolved = false, callback, args;
 
-    function Promise() {
-        var self = this;
-        var resolved = false, callback, args;
-
-        function execute() {
-            callback.apply({}, args);
+    function execute() {
+        callback.apply({
+    }, args);
         }
 
         self.then = function (clback) {
             callback = clback;
             if (resolved) {
                 execute();
-            }
+}
         };
         self.done = function () {
             args = arguments;
             resolved = true;
             if (callback) {
                 execute();
-            }
+}
         };
     };
 

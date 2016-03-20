@@ -1,6 +1,6 @@
 ﻿(function() {
     'use strict';
-    app.core.framework.register({
+    CoreJs.register({
         module: "app.core.framework.components.FriendComponent",
         definition : execute
     });

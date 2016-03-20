@@ -1,6 +1,6 @@
 ﻿(function () {
     'use strict';
-    app.core.framework.register({
+    CoreJs.register({
         module: "app.core.framework.module.userfriendlist.UsuarioService",
         definition: execute
     });
