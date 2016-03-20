@@ -309,12 +309,14 @@ table {
   background-color: #545454;
   opacity: 0.6; }
   .loading i {
+    /* width: 150px; */
     position: absolute;
-    top: 31%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 12em;
-    color: blue; }
+    color: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 /* Menu left*/
 .menu-left-content {
@@ -401,7 +403,7 @@ table {
       display: inline-table;
       cursor: pointer;
       color: #000;
-      font-size: 21px;
+      font-size: 2vw;
       transition: all ease 1s; }
       .navbar .nav-right li:last-child {
         font-weight: 200;
@@ -419,7 +421,7 @@ table {
 .toggle-menu {
   background-color: #9EBBD4;
   width: 100%;
-  margin-top: -2px!important;
+  margin-top: -2px !important;
   z-index: 999999;
   font-size: 7vw; }
   .toggle-menu .footer {
@@ -428,8 +430,8 @@ table {
   .toggle-menu .item {
     border-right: 1px solid #FFFFFF;
     padding: 10px;
-    padding-right:40px;
-    padding-left:40px;
+    padding-right: 40px;
+    padding-left: 40px;
     color: #6F6E6E; }
     .toggle-menu .item a {
       color: #6F6E6E;
